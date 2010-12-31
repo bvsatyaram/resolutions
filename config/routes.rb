@@ -1,4 +1,10 @@
 Resolutions::Application.routes.draw do
+  get 'resolutions/suggest'
+  post 'resolutions/suggest'
+  get 'oauth/authorize'
+  post 'oauth/authorize'
+  get 'oauth/callback'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +54,7 @@ Resolutions::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "resolutions#suggest"
+  root :to => "oauth#authorize"
 
   # See how all your routes lay out with "rake routes"
 
